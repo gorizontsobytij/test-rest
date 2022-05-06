@@ -1,0 +1,35 @@
+TestRoute:
+  path:         /{trailingSlash}
+  controller:   Src\Controllers\SmogController::index
+  methods:      [GET]
+  requirements: { trailingSlash: "[/]{0,1}" }
+
+TaskCreateRoute:
+  path:         /api/v1/task/create{trailingSlash}
+  controller:   Src\Controllers\TaskController::create
+  methods:      [POST]
+  requirements: { trailingSlash: "[/]{0,1}" }
+
+TaskEditRoute:
+  path:         /api/v1/task/edit{trailingSlash}
+  controller:   Src\Controllers\TaskController::edit
+  methods:      [PUT]
+  requirements: { trailingSlash: "[/]{0,1}" }
+
+TaskDeleteRoute:
+  path:         /api/v1/task/delete{trailingSlash}
+  controller:   Src\Controllers\TaskController::delete
+  methods:      [DELETE]
+  requirements: { trailingSlash: "[/]{0,1}" }
+
+TaskShowRoute:
+  path:         /api/v1/task/show{trailingSlash}
+  controller:   Src\Controllers\TaskController::show
+  methods:      [GET]
+  requirements: { trailingSlash: "[/]{0,1}" }
+
+TaskStatusChangeRoute:
+  path:         /api/v1/task/edit-status{trailingSlash}
+  controller:   Src\Controllers\TaskController::changeStatus
+  methods:      [PUT]
+  requirements: { trailingSlash: "[/]{0,1}" }
